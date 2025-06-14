@@ -1,3 +1,7 @@
 [submodule "back"]
 	path = back
 	url = https://github.com/VMM-MMV/IOT
+
+[submodule "front"]
+	path = front
+	url = https://github.com/ArinaPereteatcu26/DeltaRobot
