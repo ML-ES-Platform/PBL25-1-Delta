@@ -27,7 +27,7 @@ def camera_to_robot(x, y):
     return result[0][0]
 
 # === Main Logic ===
-with connect_serial(port='COM6', baud=115200, timeout=2, graceful_exit_flag=True) as ser:
+with connect_serial(port='COM3', baud=115200, timeout=2, graceful_exit_flag=True) as ser:
     if ser is None:
         exit(1)
         
@@ -65,6 +65,11 @@ with connect_serial(port='COM6', baud=115200, timeout=2, graceful_exit_flag=True
                     move_to_position(ser, x=drop_pos["x"], y=drop_pos["y"])
                     place(ser)
     
+
+
+
+
+
 
     # move_to_position(ser, x=100)
     # move_to_position(ser, y=100)

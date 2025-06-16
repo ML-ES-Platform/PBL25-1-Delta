@@ -2,7 +2,7 @@ from contextlib import contextmanager
 import serial
 import time
 
-COM_PORT = 'COM6'
+COM_PORT = 'COM3'
 BAUD_RATE = 115200
 TIMEOUT = 2
 

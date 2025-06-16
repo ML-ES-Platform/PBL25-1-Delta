@@ -70,7 +70,7 @@ def main():
     last_point_collected = -1  # Track last collected point
 
     # Initialize robot connection
-    with connect_serial(port='COM6', baud=115200, timeout=2, graceful_exit_flag=True) as ser:
+    with connect_serial(port='COM3', baud=115200, timeout=2, graceful_exit_flag=True) as ser:
         if ser is None:
             print("❌ Error: Cannot connect to robot")
             return
@@ -79,7 +79,7 @@ def main():
         retries = 3
         cap = None
         while retries > 0:
-            cap = cv2.VideoCapture("rtsp://localhost:8554/stream")
+            cap = cv2.VideoCapture("rtmp://localhost/live/stream")
             if cap.isOpened():
                 # Ensure we can actually read frames
                 ret, frame = cap.read()
